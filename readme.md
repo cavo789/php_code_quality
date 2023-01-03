@@ -47,7 +47,7 @@ That first command will generate the `_ide_helper.php` file. That file will be u
 For the second command, prefer to use the `--write-mixin` argument to avoid PHP errors saying a class is already defined since Laravel IDE helper will recreate all models in his `_ide_model.php` file. Using a mixin will add an additional Docblock in all existing models.
 
 ```bash
-php artisan ide-helper:models -F helpers/_ide_model.php --write-mixin
+php artisan ide-helper:models -F .config/_ide_model.php --write-mixin
 ```
 
 Note: `-F` allow to specify the name of the output file.
@@ -60,7 +60,7 @@ In that scenario, we just need to make sure the `_ide_model.php` file is well lo
 
 ```neon
 scanDirectories:
-  - ./helpers
+  - ./.config
 ```
 
 ## Tools
