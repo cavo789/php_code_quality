@@ -28,6 +28,13 @@ includes:
     - ./vendor/nunomaduro/larastan/extension.neon
 ```
 
+> ℹ️ **Info** If you're using Larastan from the jakzal/phpqa Docker image, the path should be:
+
+```neon
+includes:
+    - /tools/.composer/vendor-bin/larastan/vendor/nunomaduro/larastan/extension.neon
+```
+
 ## How to run
 
 ```bash
